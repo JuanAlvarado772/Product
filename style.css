@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 62.5%; 
+}
+
+html, body { min-height: 100%; overflow-x: hidden; }
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/pexels-alancabello-1291515.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: clamp(12px, 4vw, 24px);
+    position: relative;
+}
+
+
+
+
+main {
+    z-index: 1;
+    max-width: 700px;
+    background: #FAEBD7;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin: .75em;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background: inherit; 
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  filter: blur(5px);   
+  transform: scale(1.1); 
+  z-index: -1; 
+}
+
+.text {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 2em;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+.para {
+    font-size: 1.2rem;
+}
+
+.text h3 {
+    font-size: 1.8rem;
+    color:lightseagreen
+}
+
+.text h1 {
+    font-size: 2.5rem;
+}
+
+.price {
+  font-size: 2.3rem;
+
+}
+
+.discount {
+  font-size: 1.1rem;
+  position: relative;
+  left: 4%;
+  top: -5px;
+  text-decoration: line-through;
+
+
+}
+
+.cart {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  background-color: lightseagreen;
+  padding: 1em;
+  border-radius: .5em;
+}
+
+.cart:hover {
+  background-color: darkslategray;
+  color: white;
+  cursor: pointer;
+}
+
+.cart:active {
+  transform: scale(.9);
+}
+
+.fi {
+  margin-right: .5em;
+}
+
+
+img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.attribution {
+    margin-top: 40px;
+}
+
+
+
+@media (max-width: 75em) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 61.25em) {
+  html {
+    font-size: 65%;
+  }
+}
+@media (max-width: 450px) {
+
+  main {
+    flex-direction: column;
+    
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  };
+}
+
+@media (max-height: 790px) {
+  body {
+    justify-content: flex-start;   /* no vertical centering */
+    padding-top: 16px;             /* keep a small top gutter */
+  }
+  main {
+    margin-block: 12px;            /* small extra breathing room */
+  }
+}
